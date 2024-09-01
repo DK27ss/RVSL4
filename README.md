@@ -54,8 +54,53 @@ Il n'existe pas vraiment de meilleur techniques d'obfuscation car celà dépend 
       https://github.com/spicesouls/onelinepy
       https://github.com/davidteather/python-obfuscator
 
+# CONSTRUCTION
+
 Une fois obfusquer construisez ensuite votre fichier client en executable (cli.exe)
 Commande pour construire via pyinstaller : pyinstaller --onefile --windowed FILE_NAME.py
 
 ![6](https://github.com/user-attachments/assets/2de6aaf8-0a12-4131-96e3-83cfe54d9e00)
+![9](https://github.com/user-attachments/assets/bd435dfa-870b-4aa3-8dcf-b73e701adfd6)
+
+Une fois la construction rendez-vous dans le répertoire 'dist' ou se trouvera votre executable cli.EXE
+Veuillez suivre la même procédure de construction et d'obfuscation si vous souhaitez utilisez des ADDONS EXTERNES afin de les upload et les lancer directement depuis le C2.
+
+![10](https://github.com/user-attachments/assets/344342f0-5ca7-4c2c-b084-076bef03aa8d)
+![11](https://github.com/user-attachments/assets/bad05ac7-a7c4-4ccb-8ea3-aadbae7fe334)
+
+# COMMANDES
+
+        //  exec            ->  Run external command or local file 
+        //  start           ->  Start file from client machine (exe, txt, pdf, odt, etc..)
+        //  check           ->  Check if client machine is connected to internet                                             
+        //  browse          ->  Open an website on client machine browser
+        //  download        ->  Download file from client machine 
+        //  upload          ->  Upload file to client machine  
+        //  kill            ->  Kill the connection with client machine 
+
+
+        //  pwd             ->  Print working directory in client machine 
+        //  scp             ->  Copy files to client with SSH
+        //  route print     ->  Show Routes Tables
+        //  whoami          ->  Get name of client machine (LINUX ONLY)
+        //  hostname        ->  Show hostname of client machine
+        //  arp -a          ->  Show all current protocol statistics and TCP/IP connections
+        //  ipconfig /all   ->  Show ip configurations from client machine (ipv4, ipv6, mac, etc..)
+        //  getmac          ->  Show mac addresses of client machine
+        //  netstat         ->  Show all actives connections from client machine 
+        //  uname -a        ->  Show kernel of client machine  [ONLY LINUX GNU]  
+        //  systeminfo      ->  Show all informations of client machine    (os version, desktop name, etc..)
+
+        // webcam           ->  Remote webcam [DIRECT 60FPS] [NO GUI]
+        // desktop          ->  Remote desktop [DIRECT 60FPS] [NO GUI]
+
+        // dwd              ->  Disable Windows Defender AV [Real-Time Protect]
+        // stlinfos         ->  Steal discord token | browser passwords | cookies | mail and others informations [Webhook ONLY]
+        // deskscp          ->  Steal session name | desktop name | ip | camera and desktop screenshot [Webhook ONLY] [AUTO-MODE AVAILABLE]
+        // autoscp          ->  Take a desktop screenshot every minute [Webhook ONLY] [AUTO-MODE]
+        // klog             ->  Enable keylogger server
+
+
+https://github.com/user-attachments/assets/b17b45fa-4e8d-47e0-a9e6-9901eab7d3b3
+
 
