@@ -2,68 +2,70 @@
 
 # Description
 
-RVSL4 est un framework modulaire conçu pour des actions de surveillance électronique sur des appareils de type ordinateur sous l'OS Windows. Il permet une post-exploitation flexible et personnalisable, offrant un ensemble d'outils pour surveiller les activités et collecter des informations à distance. RVSL4 est destiné à des fins de surveillance uniquement, et doit être utilisé en conformité avec les lois et régulations en vigueur.
+RVSL4 is a modular framework designed for electronic surveillance actions on computers running the Windows OS. It enables flexible and customizable post-exploitation, offering a set of tools to monitor activities and collect information remotely. RVSL4 is intended for surveillance purposes only and must be used in compliance with applicable laws and regulations.
+
+RVSL4 does not support multi-threading.
 
 # ADDONS INTERNES
 
-    - DESKTOP : Ouvre un serveur pour recevoir le flux du bureau client en temps réel.
-    - WEBCAM : Ouvre un serveur pour recevoir le flux de la webcam client en temps réel. (60 FPS)
+    - DESKTOP : Opens a server to receive the client's desktop stream in real-time.
+    - WEBCAM : Opens a server to receive the client's webcam stream in real-time. (60 FPS)
 
 # ADDONS EXTERNES
 
-    - KLOG : Suivi des entrées clavier pour analyser les interactions utilisateur.
-    - AUTOSCP : Effectue des captures d'écrans du bureau en automatique avec un timer modulable et exfiltre ensuite les captures sur discord via un webhook.
-    - DESKSCP : Effectue des captures d'écrans du bureau ainsi que de la webcam et exfiltre ensuite les captures sur discord via un webhook.
-    - DWINDEF : Désactive windows defender.
-    - STLINFOS : Steal les infos et le token discord avec Creal.
+    - KLOG : Tracks keystrokes to analyze user interactions.
+    - AUTOSCP : Automatically captures desktop screenshots at adjustable intervals and exfiltrates them to Discord with webhook.
+    - DESKSCP : Captures desktop and webcam screenshots and exfiltrates them to Discord with webhook.
+    - DWINDEF : Disables Windows Defender.
+    - STLINFOS : Steals information and Discord tokens with Creal.
 
 # USAGE
 
-Lancer le serveur C2 avec les commandes suivantes :
+Start the C2 server with the following commands :
 
     python rvsl4.py <IP/DDNS> <PORT>
-    Exemple : python rvsl4.py sha78221662145822.ddns.net 5555
+    Example : python rvsl4.py sha78221662145822.ddns.net 5555
 
 ![2](https://github.com/user-attachments/assets/f0179195-733e-4332-9c8b-04dfaa926c20)
 
-Modifier les informations de connexion dans le fichier client (cli.py) avec la même IP ou le même DDNS que vous avez utilisé pour lancer le serveur afin que votre client se connecte correctement à votre serveur C2 RVSL4.
+Edit connection informations in the client file (cli.py) with the same IP or DDNS used to start the server to ensure your client connects correctly to your RVSL4 C2 server.
 
 ![3](https://github.com/user-attachments/assets/742a4f1a-07b4-41cb-82ac-382315cc6dc1)
 
 # OBFUSCATION
 
-Il est conseiller d'obfusquer votre fichier client avant d'entamer la construction afin de contourner les antivirus.
-Il n'existe pas vraiment de meilleur techniques d'obfuscation car celà dépend en premier temps des antivirus utilisé par vos cibles et dans un second temps de la force et de la technique utilisé pour votre obfuscation, il existe beaucoup de manières d'obfusquer un code mais je vais vous présenter la base.
+It is recommended to obfuscate your client file before building it to bypass antivirus detection. 
+There is no single best obfuscation technique as it depends on the antivirus software used by your targets and the strength and method of your obfuscation.
+There are many ways to obfuscate code, but here is a basic approach.
 
-- Via modules python
+- With python modules
 
       pip install pyarmor            https://pypi.org/project/pyarmor/
       pip install PyObfuscator       https://pypi.org/project/PyObfuscator/
 
-- Via outils web
+- With web tools
 
       https://pyobfuscate.com/
       https://development-tools.net/python-obfuscator/
       https://freecodingtools.org/py-obfuscator
       https://pyob.oxyry.com/
 
-- Ressources Github
+- With Github ressources
 
       https://github.com/billythegoat356/Hyperion
       https://github.com/billythegoat356/Kramer
       https://github.com/spicesouls/onelinepy
       https://github.com/davidteather/python-obfuscator
 
-# CONSTRUCTION
+# BUILD
 
-Une fois obfusquer construisez ensuite votre fichier client en executable (cli.exe)
-Commande pour construire via pyinstaller : pyinstaller --onefile --windowed FILE_NAME.py
+Once obfuscated, build your client file into an executable (cli.exe). Command to build via pyinstaller : pyinstaller --onefile --windowed FILE_NAME.py
 
 ![6](https://github.com/user-attachments/assets/2de6aaf8-0a12-4131-96e3-83cfe54d9e00)
 ![9](https://github.com/user-attachments/assets/bd435dfa-870b-4aa3-8dcf-b73e701adfd6)
 
-Une fois la construction rendez-vous dans le répertoire 'dist' ou se trouvera votre executable cli.EXE
-Veuillez suivre la même procédure de construction et d'obfuscation si vous souhaitez utilisez des ADDONS EXTERNES afin de les upload et les lancer directement depuis le C2.
+After building, go to the 'dist' directory where your cli.EXE executable will be located.
+Follow the same building and obfuscation procedure if you want to use EXTERNAL ADDONS, so they can be uploaded and launched directly from the C2.
 
 ![10](https://github.com/user-attachments/assets/344342f0-5ca7-4c2c-b084-076bef03aa8d)
 ![11](https://github.com/user-attachments/assets/bad05ac7-a7c4-4ccb-8ea3-aadbae7fe334)
