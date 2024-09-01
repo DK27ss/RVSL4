@@ -103,4 +103,20 @@ Veuillez suivre la même procédure de construction et d'obfuscation si vous sou
 
 https://github.com/user-attachments/assets/b17b45fa-4e8d-47e0-a9e6-9901eab7d3b3
 
+# ABOUT 📑
+
+Buy me a Coffee ☕️ ETH ARBITRUM ONLY 0xCeB10eEC23826DdCb14397dB855B9302D36822bE
+If you would like to contribute to the development of the project, please contact me on my Telegram @makaki22 
+
+MIT License
+
+Copyright (c) [2024] [SUPERPOSE INT]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
 
