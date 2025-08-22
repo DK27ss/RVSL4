@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# BladeRun © 2707
 import time
 import discord
 from discord.ext import commands
@@ -497,7 +496,7 @@ if len(sys.argv) != 3:
     system("cls")
     print(Fore.MAGENTA + """
     ───────────────▄▄───▐█
-    ───▄▄▄───▄██▄──█▀───█─▄   Code By @makaki22
+    ───▄▄▄───▄██▄──█▀───█─▄  
     ─▄██▀█▌─██▄▄──▐█▀▄─▐█▀  (v4.0.2)
     ▐█▀▀▌───▄▀▌─▌─█─▌──▌─▌    Post-Exploit
     ▌▀▄─▐──▀▄─▐▄─▐▄▐▄─▐▄─▐▄     Framework.
@@ -516,3 +515,4 @@ server(sys.argv[1], int(sys.argv[2]))
                                                                                
                                                                               
                                                                                                                              
+
