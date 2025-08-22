@@ -106,10 +106,6 @@ Follow the same building and obfuscation procedure if you want to use EXTERNAL A
 
 https://github.com/user-attachments/assets/b17b45fa-4e8d-47e0-a9e6-9901eab7d3b3
 
-# About
-
-If you would like to contribute to the development of the project, please contact me on my Telegram @makaki22 
-
 MIT License
 
 Copyright (c) [2024] [SUPERPOSE INT]
